@@ -44,18 +44,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-          cache-dependency-path: ts-core/package-lock.json
-      - name: Build ts-core first (peer dependency)
-        run: npm ci && npm run build
+      - name: Build and pack ts-core
+        run: npm ci && npm run build && npm pack
         working-directory: ts-core
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-          cache-dependency-path: ts-react/package-lock.json
-      - name: Install dependencies
-        run: npm ci
+      - name: Install ts-react with packed ts-core
+        run: npm install "$(ls ../ts-core/*.tgz)" && npm ci
         working-directory: ts-react
       - name: Build
         run: npm run build
@@ -116,11 +112,18 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
-      - name: Build ts-core first (peer dependency)
-        run: npm ci && npm run build
+      - name: Build and pack ts-core
+        run: npm ci && npm run build && npm pack
         working-directory: ts-core
-      - name: Install and build
-        run: npm ci && npm run build
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install ts-react with packed ts-core
+        run: npm install "$(ls ../ts-core/*.tgz)" && npm ci
+        working-directory: ts-react
+      - name: Build
+        run: npm run build
         working-directory: ts-react
       - name: Check version not already published
         id: check
