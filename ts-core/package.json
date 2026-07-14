@@ -1,6 +1,6 @@
 {
   "name": "@telebirr-sdk/sdk-core",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
   "description": "Headless TypeScript SDK for Ethio Telecom Telebirr payment gateway",
   "main": "dist/cjs/index.js",
@@ -43,7 +43,7 @@
     "email": "asasahegn17@gmail.com",
     "url": "https://ahadutech.com"
   },
-  "homepage": "https://doyo.com",
+  "homepage": "https://github.com/7Doyo/telebirr-sdk.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/7Doyo/telebirr-sdk.git",

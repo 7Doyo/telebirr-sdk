@@ -1,6 +1,6 @@
 {
   "name": "@telebirr-sdk/react-elements",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Optional React UI components for the Telebirr payment SDK",
   "type": "module",
   "main": "dist/cjs/index.js",
@@ -59,7 +59,7 @@
     "email": "asasahegn17@gmail.com",
     "url": "https://ahadutech.com"
   },
-  "homepage": "ttps://github.com/7Doyo/telebirr-sdk.git",
+  "homepage": "https://github.com/7Doyo/telebirr-sdk.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/7Doyo/telebirr-sdk.git",
