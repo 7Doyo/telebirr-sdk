@@ -1,0 +1,16 @@
+{
+  "name": "telebirr-php-slim-example",
+  "description": "Telebirr SDK example with PHP Slim Framework",
+  "type": "project",
+  "require": {
+    "php": ">=8.1",
+    "telebirr/sdk-core": "file:..",
+    "slim/slim": "^4.14",
+    "slim/psr7": "^1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}

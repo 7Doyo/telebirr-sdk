@@ -1,0 +1,67 @@
+{
+  "name": "@telebirr/sdk-core",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Headless TypeScript SDK for Ethio Telecom Telebirr payment gateway",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build:esm": "tsc -p tsconfig.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run build:esm && npm run build:cjs",
+    "test": "npx --node-options=\"--experimental-vm-modules\" jest",
+    "lint": "tsc --noEmit"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "~5.7.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Asasahegn Alemayehu",
+    "email": "asasahegn17@gmail.com",
+    "url": "https://ahadutech.com"
+  },
+  "homepage": "https://doyo.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7Doyo/telebirr-sdk.git",
+    "directory": "ts-core"
+  },
+  "bugs": {
+    "url": "https://github.com/7Doyo/telebirr-sdk/issues"
+  },
+  "funding": {
+    "type": "telebirr",
+    "url": "https://telebirr.et/+251965631263"
+  },
+  "keywords": [
+    "telebirr",
+    "ethio-telecom",
+    "payment",
+    "ethiopia",
+    "sdk",
+    "mobile-money"
+  ]
+}

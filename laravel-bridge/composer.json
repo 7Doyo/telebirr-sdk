@@ -1,0 +1,63 @@
+{
+  "name": "telebirr/laravel-bridge",
+  "description": "Laravel integration for the Telebirr payment SDK",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Asasahegn Alemayehu",
+      "email": "asasahegn17@gmail.com",
+      "homepage": "https://ahadutech.com"
+    }
+  ],
+  "homepage": "https://github.com/7Doyo/telebirr-sdk",
+  "support": {
+    "issues": "https://github.com/7Doyo/telebirr-sdk/issues",
+    "source": "https://github.com/7Doyo/telebirr-sdk"
+  },
+  "keywords": [
+    "telebirr",
+    "ethio-telecom",
+    "payment",
+    "ethiopia",
+    "laravel",
+    "php"
+  ],
+  "require": {
+    "php": ">=8.1",
+    "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+    "telebirr/sdk-core": "^0.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "orchestra/testbench": "^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Telebirr\\Laravel\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Telebirr\\Laravel\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Telebirr\\Laravel\\TelebirrServiceProvider"
+      ],
+      "aliases": {
+        "Telebirr": "Telebirr\\Laravel\\TelebirrFacade"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

@@ -1,0 +1,83 @@
+{
+  "name": "@telebirr/react-elements",
+  "version": "0.1.0",
+  "description": "Optional React UI components for the Telebirr payment SDK",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build:esm": "tsc -p tsconfig.build.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run build:esm && npm run build:cjs",
+    "test": "npx --node-options='--experimental-vm-modules' jest --config jest.config.cjs",
+    "lint": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "dependencies": {
+    "@telebirr/sdk-core": "file:../ts-core",
+    "i18next": "^24.0.0",
+    "react-i18next": "^15.0.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.0.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/jest": "^29.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^30.4.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "~5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Asasahegn Alemayehu",
+    "email": "asasahegn17@gmail.com",
+    "url": "https://ahadutech.com"
+  },
+  "homepage": "https://doyo.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7Doyo/telebirr-sdk.git",
+    "directory": "ts-react"
+  },
+  "bugs": {
+    "url": "https://github.com/7Doyo/telebirr-sdk/issues"
+  },
+  "funding": {
+    "type": "telebirr",
+    "url": "https://telebirr.et/+251965631263"
+  },
+  "keywords": [
+    "telebirr",
+    "ethio-telecom",
+    "payment",
+    "ethiopia",
+    "react",
+    "ui-components"
+  ]
+}

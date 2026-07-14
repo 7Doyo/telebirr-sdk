@@ -1,0 +1,22 @@
+{
+  "name": "telebirr-ts-express-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Telebirr SDK example with TypeScript and Express.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@telebirr/sdk-core": "file:..",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "~5.7.0"
+  }
+}

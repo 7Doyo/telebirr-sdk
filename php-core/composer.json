@@ -1,0 +1,42 @@
+{
+  "name": "telebirr/sdk-core",
+  "description": "Headless PHP SDK for Ethio Telecom Telebirr payment gateway",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Asasahegn Alemayehu",
+      "email": "asasahegn17@gmail.com",
+"homepage": "https://ahadutech.com"
+    }
+  ],
+  "homepage": "https://github.com/7Doyo/telebirr-sdk",
+  "support": {
+    "issues": "https://github.com/7Doyo/telebirr-sdk/issues",
+    "source": "https://github.com/7Doyo/telebirr-sdk"
+  },
+  "keywords": [
+    "telebirr",
+    "ethio-telecom",
+    "payment",
+    "ethiopia",
+    "php",
+    "sdk"
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Telebirr\\Sdk\\Core\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Telebirr\\Sdk\\Core\\Tests\\": "tests/"
+    }
+  }
+}

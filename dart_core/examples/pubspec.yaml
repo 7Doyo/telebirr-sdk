@@ -1,0 +1,11 @@
+name: dart_example
+description: Telebirr SDK pure Dart CLI example
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  telebirr_sdk_core:
+    path: ..
