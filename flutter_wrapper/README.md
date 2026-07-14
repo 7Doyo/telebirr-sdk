@@ -1,5 +1,11 @@
 # telebirr_flutter_elements
 
+<details>
+<summary>🚧 <strong>Project Status: In Development</strong></summary>
+<br>
+This project is currently active and under heavy development. Things are changing rapidly, and not all features are fully functional yet. Check back often for updates!
+</details>
+
 Flutter UI components and utilities for the [Telebirr](https://www.telebirr.et/) payment gateway.
 
 This package wraps [`telebirr_sdk_core`](../dart_core/) with ready-to-use Material Design widgets, state management via `ChangeNotifier`, and built-in localization. If you only need the headless API client without UI dependencies, use `telebirr_sdk_core` directly.

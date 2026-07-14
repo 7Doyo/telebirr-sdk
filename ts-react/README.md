@@ -1,5 +1,11 @@
 # @telebirr-sdk/react-elements
 
+<details>
+<summary>🚧 <strong>Project Status: In Development</strong></summary>
+<br>
+This project is currently active and under heavy development. Things are changing rapidly, and not all features are fully functional yet. Check back often for updates!
+</details>
+
 React 19 UI components and hooks for the [Telebirr](https://developerportal.ethiotelebirr.et) payment gateway.
 
 Wraps [`@telebirr-sdk/sdk-core`](../ts-core/) with React context, hooks, and ready-to-use components. All components are client-rendered (`'use client'`) and ship with built-in i18n support for five languages.

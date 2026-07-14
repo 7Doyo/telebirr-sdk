@@ -1,5 +1,11 @@
 # telebirr/sdk-core
 
+<details>
+<summary>🚧 <strong>Project Status: In Development</strong></summary>
+<br>
+This project is currently active and under heavy development. Things are changing rapidly, and not all features are fully functional yet. Check back often for updates!
+</details>
+
 Headless PHP SDK for the Ethio Telecom Telebirr payment gateway.
 
 Zero external runtime dependencies -- uses only `curl` and `openssl` from the PHP standard library.

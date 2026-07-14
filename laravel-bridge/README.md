@@ -1,5 +1,11 @@
 # Telebirr Laravel Bridge
 
+<details>
+<summary>🚧 <strong>Project Status: In Development</strong></summary>
+<br>
+This project is currently active and under heavy development. Things are changing rapidly, and not all features are fully functional yet. Check back often for updates!
+</details>
+
 Laravel integration for the [Telebirr Payment Gateway](https://developerportal.ethiotelebirr.et/). Wraps the headless [`telebirr/sdk-core`](../php-core/README.md) package with Laravel-native service providers, facades, helper functions, route registration, event dispatching, and localization.
 
 ## Requirements

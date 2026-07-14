@@ -1,5 +1,11 @@
 # telebirr_sdk_core
 
+<details>
+<summary>🚧 <strong>Project Status: In Development</strong></summary>
+<br>
+This project is currently active and under heavy development. Things are changing rapidly, and not all features are fully functional yet. Check back often for updates!
+</details>
+
 Headless Dart SDK for the Ethio Telecom Telebirr payment gateway. Zero UI dependencies -- build your own integration on top of a clean, typed API.
 
 ## Features
