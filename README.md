@@ -1,5 +1,11 @@
 # Telebirr SDK
 
+<details>
+<summary>🚧 <strong>Project Status: In Development</strong></summary>
+<br>
+This project is currently active and under heavy development. Things are changing rapidly, and not all features are fully functional yet. Check back often for updates!
+</details>
+
 A multi-language payment SDK for Ethio Telecom's Telebirr payment gateway. Provides headless core libraries and optional UI wrappers for TypeScript, Dart, PHP, React, Flutter, and Laravel.
 
 ## Packages
