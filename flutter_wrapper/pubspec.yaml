@@ -14,9 +14,10 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  intl: any
-  telebirr_sdk_core:
-    path: ../dart_core
+  intl: ^0.20.2
+  # intl: any
+  telebirr_sdk_core: ^1.0.0
+    # path: ../dart_core
 
 dev_dependencies:
   flutter_test:
