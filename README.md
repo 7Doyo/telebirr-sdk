@@ -6,10 +6,10 @@ A multi-language payment SDK for Ethio Telecom's Telebirr payment gateway. Provi
 
 | Package | Path | Registry | Description |
 |---------|------|----------|-------------|
-| TS Core | `ts-core/` | npm: `@telebirr/sdk-core` | Headless TypeScript SDK |
+| TS Core | `ts-core/` | npm: `@telebirr-sdk/sdk-core` | Headless TypeScript SDK |
 | Dart Core | `dart_core/` | pub.dev: `telebirr_sdk_core` | Headless Dart SDK |
 | PHP Core | `php-core/` | packagist: `telebirr/sdk-core` | Headless PHP SDK |
-| React Elements | `ts-react/` | npm: `@telebirr/react-elements` | React 19 UI components |
+| React Elements | `ts-react/` | npm: `@telebirr-sdk/react-elements` | React 19 UI components |
 | Flutter Elements | `flutter_wrapper/` | pub.dev: `telebirr_flutter_elements` | Flutter widgets |
 | Laravel Bridge | `laravel-bridge/` | packagist: `telebirr/laravel-bridge` | Laravel integration |
 
@@ -36,11 +36,11 @@ Core Layer (TS Core, Dart Core, PHP Core)
 ### TypeScript
 
 ```bash
-npm install @telebirr/sdk-core
+npm install @telebirr-sdk/sdk-core
 ```
 
 ```typescript
-import { TelebirrSDK } from '@telebirr/sdk-core';
+import { TelebirrSDK } from '@telebirr-sdk/sdk-core';
 
 const sdk = new TelebirrSDK({
   environment: 'SANDBOX',
@@ -111,11 +111,11 @@ $result = $sdk->payments()->charge([
 ### React
 
 ```bash
-npm install @telebirr/react-elements
+npm install @telebirr-sdk/react-elements
 ```
 
 ```tsx
-import { PaymentButton } from '@telebirr/react-elements';
+import { PaymentButton } from '@telebirr-sdk/react-elements';
 
 function Checkout() {
   return (
