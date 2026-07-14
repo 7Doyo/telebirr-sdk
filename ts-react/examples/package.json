@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@telebirr/sdk-core": "file:../../ts-core",
-    "@telebirr/react-elements": "file:..",
+    "@telebirr-sdk/sdk-core": "file:../../ts-core",
+    "@telebirr-sdk/react-elements": "file:..",
     "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

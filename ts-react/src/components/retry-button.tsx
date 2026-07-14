@@ -1,6 +1,6 @@
 'use client';
 import { useTranslation } from 'react-i18next';
-import type { CreateOrderParams, CreateOrderResponse } from '@telebirr/sdk-core';
+import type { CreateOrderParams, CreateOrderResponse } from '@telebirr-sdk/sdk-core';
 import { useRetry } from '../hooks/use-retry.js';
 
 /** Props accepted by the {@link RetryButton} component. */

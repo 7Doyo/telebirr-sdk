@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { verifyNotification } from '@telebirr/sdk-core';
-import type { NotificationPayload } from '@telebirr/sdk-core';
+import { verifyNotification } from '@telebirr-sdk/sdk-core';
+import type { NotificationPayload } from '@telebirr-sdk/sdk-core';
 
 export async function POST(request: Request) {
   try {

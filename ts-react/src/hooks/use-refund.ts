@@ -1,7 +1,7 @@
 'use client';
 import { useState, useCallback } from 'react';
 import { useTelebirr } from './use-telebirr.js';
-import type { RefundParams, RefundResponse } from '@telebirr/sdk-core';
+import type { RefundParams, RefundResponse } from '@telebirr-sdk/sdk-core';
 
 /** Return value of the {@link useRefund} hook. */
 interface UseRefundResult {

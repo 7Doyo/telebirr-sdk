@@ -1,10 +1,10 @@
 import 'dotenv/config';
 import express from 'express';
-import { Telebirr, PaymentStatus, verifyNotification } from '@telebirr/sdk-core';
+import { Telebirr, PaymentStatus, verifyNotification } from '@telebirr-sdk/sdk-core';
 import type {
   TelebirrConfig,
   NotificationPayload,
-} from '@telebirr/sdk-core';
+} from '@telebirr-sdk/sdk-core';
 
 const app = express();
 app.use(express.json());

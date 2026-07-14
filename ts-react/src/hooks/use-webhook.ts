@@ -4,7 +4,7 @@ import { useTelebirr } from './use-telebirr.js';
 import {
   verifyNotification,
   type NotificationPayload,
-} from '@telebirr/sdk-core';
+} from '@telebirr-sdk/sdk-core';
 
 /** Return value of the {@link useWebhook} hook. */
 interface UseWebhookResult {

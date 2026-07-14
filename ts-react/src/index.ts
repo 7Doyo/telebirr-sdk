@@ -14,4 +14,4 @@ export { RetryButton } from './components/retry-button.js';
 export { telebirrI18n, createTelebirrI18n } from './i18n/index.js';
 export type { TelebirrTranslations } from './i18n/index.js';
 
-export * from '@telebirr/sdk-core';
+export * from '@telebirr-sdk/sdk-core';

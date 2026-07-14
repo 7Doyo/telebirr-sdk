@@ -1,4 +1,4 @@
-# @telebirr/sdk-core
+# @telebirr-sdk/sdk-core
 
 Headless TypeScript SDK for the Ethio Telecom Telebirr payment gateway.
 
@@ -18,7 +18,7 @@ Zero external runtime dependencies. Built on Node.js native `crypto` and `fetch`
 ## Installation
 
 ```bash
-npm install @telebirr/sdk-core
+npm install @telebirr-sdk/sdk-core
 ```
 
 Requires Node.js >= 18.
@@ -26,7 +26,7 @@ Requires Node.js >= 18.
 ## Quick Start
 
 ```typescript
-import { Telebirr, PaymentStatus } from '@telebirr/sdk-core';
+import { Telebirr, PaymentStatus } from '@telebirr-sdk/sdk-core';
 
 const client = new Telebirr({
   environment: 'SANDBOX',
@@ -66,7 +66,7 @@ if (result.status === PaymentStatus.SUCCESS) {
 The main client class. Instantiate with a `TelebirrConfig` object.
 
 ```typescript
-import { Telebirr } from '@telebirr/sdk-core';
+import { Telebirr } from '@telebirr-sdk/sdk-core';
 
 const client = new Telebirr(config);
 ```
@@ -279,7 +279,7 @@ Unknown statuses default to `PENDING`.
 Verify incoming webhook notification signatures.
 
 ```typescript
-import { verifyNotification, NotificationTradeStatus } from '@telebirr/sdk-core';
+import { verifyNotification, NotificationTradeStatus } from '@telebirr-sdk/sdk-core';
 
 const isValid = verifyNotification(payload, publicKeyPem);
 ```
@@ -315,7 +315,7 @@ enum NotificationTradeStatus {
 Constructs the receive code string for in-app payment flows.
 
 ```typescript
-import { buildReceiveCode } from '@telebirr/sdk-core';
+import { buildReceiveCode } from '@telebirr-sdk/sdk-core';
 
 const code = buildReceiveCode(shortCode, amount, prepayId, timeout);
 // => "TELEBIRR$BUYGOODS220311100PREPAY123%120m"
@@ -334,7 +334,7 @@ Also available as `client.payments.buildReceiveCode(prepayId)` which uses the co
 Generates a SHA-256 hex digest from an order ID for idempotent requests.
 
 ```typescript
-import { generateIdempotencyKey } from '@telebirr/sdk-core';
+import { generateIdempotencyKey } from '@telebirr-sdk/sdk-core';
 
 const key = generateIdempotencyKey('ORD1719000000ABCDEF');
 ```
@@ -344,7 +344,7 @@ const key = generateIdempotencyKey('ORD1719000000ABCDEF');
 Wraps an async function with exponential backoff retry logic.
 
 ```typescript
-import { withRetry } from '@telebirr/sdk-core';
+import { withRetry } from '@telebirr-sdk/sdk-core';
 
 const result = await withRetry(
   () => client.payments.charge({ amount: '100', title: 'Order' }),
@@ -371,7 +371,7 @@ Delays follow the pattern `baseDelayMs * 2^(attempt - 1)`, capped at `maxDelayMs
 Generates a 32-character uppercase alphanumeric random string for use as `nonce_str`.
 
 ```typescript
-import { generateNonceStr } from '@telebirr/sdk-core';
+import { generateNonceStr } from '@telebirr-sdk/sdk-core';
 
 const nonce = generateNonceStr();
 ```
@@ -381,7 +381,7 @@ const nonce = generateNonceStr();
 In-memory token cache with configurable TTL (default 50 minutes).
 
 ```typescript
-import { TokenCache } from '@telebirr/sdk-core';
+import { TokenCache } from '@telebirr-sdk/sdk-core';
 
 const cache = new TokenCache({ ttlMs: 30 * 60 * 1000 });
 cache.set('token-value');
@@ -412,7 +412,7 @@ appid=12345&business_type=BuyGoods&merch_code=TEST_MERCHANT&merch_order_id=17190
 The low-level signing functions are exported for advanced use:
 
 ```typescript
-import { buildSignString, sha256PssSign, signRequest } from '@telebirr/sdk-core';
+import { buildSignString, sha256PssSign, signRequest } from '@telebirr-sdk/sdk-core';
 ```
 
 ## Error Handling
@@ -434,7 +434,7 @@ class TelebirrError extends Error {
 | `TelebirrError` | API error code | Telebirr API returned a non-zero code. |
 
 ```typescript
-import { TelebirrError, NetworkError, EnvironmentError } from '@telebirr/sdk-core';
+import { TelebirrError, NetworkError, EnvironmentError } from '@telebirr-sdk/sdk-core';
 
 try {
   await client.payments.charge({ amount: '100', title: 'Order' });

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { TelebirrProvider, PaymentButton, TestModeBadge } from '@telebirr/react-elements';
-import type { TelebirrConfig } from '@telebirr/sdk-core';
+import { TelebirrProvider, PaymentButton, TestModeBadge } from '@telebirr-sdk/react-elements';
+import type { TelebirrConfig } from '@telebirr-sdk/sdk-core';
 
 const config: TelebirrConfig = {
   environment: (process.env.NEXT_PUBLIC_TELEBIRR_ENVIRONMENT as 'SANDBOX' | 'PRODUCTION') ?? 'SANDBOX',

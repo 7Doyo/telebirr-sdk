@@ -1,6 +1,6 @@
 # Telebirr Next.js Example
 
-A Next.js app demonstrating `@telebirr/sdk-core` (API routes) and `@telebirr/react-elements` (UI components).
+A Next.js app demonstrating `@telebirr-sdk/sdk-core` (API routes) and `@telebirr-sdk/react-elements` (UI components).
 
 ## Setup
 

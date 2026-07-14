@@ -9,7 +9,7 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "@telebirr/sdk-core": "file:..",
+    "@telebirr-sdk/sdk-core": "file:..",
     "dotenv": "^16.4.7",
     "express": "^4.21.0"
   },

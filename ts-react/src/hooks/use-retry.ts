@@ -1,7 +1,7 @@
 'use client';
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTelebirr } from './use-telebirr.js';
-import type { CreateOrderParams, CreateOrderResponse } from '@telebirr/sdk-core';
+import type { CreateOrderParams, CreateOrderResponse } from '@telebirr-sdk/sdk-core';
 
 /** Configuration for the retry-with-backoff behaviour. */
 interface RetryConfig {

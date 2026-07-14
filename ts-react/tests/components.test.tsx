@@ -9,8 +9,8 @@ import { ErrorDisplay } from '../src/components/error-display.js';
 import { RefundButton } from '../src/components/refund-button.js';
 import { RetryButton } from '../src/components/retry-button.js';
 import { TelebirrProvider } from '../src/provider.js';
-import { PaymentStatus as PaymentStatusEnum } from '@telebirr/sdk-core';
-import type { TelebirrConfig } from '@telebirr/sdk-core';
+import { PaymentStatus as PaymentStatusEnum } from '@telebirr-sdk/sdk-core';
+import type { TelebirrConfig } from '@telebirr-sdk/sdk-core';
 
 const SANDBOX_CONFIG: TelebirrConfig = {
   environment: 'SANDBOX',

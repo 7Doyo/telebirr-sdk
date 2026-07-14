@@ -4,7 +4,7 @@ import { useTelebirr } from './use-telebirr.js';
 import type {
   CreateOrderParams,
   CreateOrderResponse,
-} from '@telebirr/sdk-core';
+} from '@telebirr-sdk/sdk-core';
 
 /** Return value of the {@link usePayment} hook. */
 interface UsePaymentResult {

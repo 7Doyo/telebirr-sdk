@@ -1,0 +1,52 @@
+# ── Dependencies ────────────────────────────────────────────────────────
+node_modules/
+vendor/
+
+# ── Dart / Flutter ──────────────────────────────────────────────────────
+.dart_tool/
+.packages
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# ── Build output ────────────────────────────────────────────────────────
+dist/
+build/
+*.tsbuildinfo
+
+# ── Generated documentation ─────────────────────────────────────────────
+doc/api/
+
+# ── Environment / secrets ───────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ── Logs ────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+
+# ── Test / coverage ─────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+.phpunit.cache/
+.phpunit.result.xml
+
+# ── IDE / OS ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Project notes ───────────────────────────────────────────────────────
+
+
+# ── Laravel bridge example ──────────────────────────────────────────────
+laravel-bridge/examples/storage/
+laravel-bridge/examples/bootstrap/cache/

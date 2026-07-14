@@ -1,13 +1,13 @@
-# @telebirr/react-elements
+# @telebirr-sdk/react-elements
 
 React 19 UI components and hooks for the [Telebirr](https://developerportal.ethiotelebirr.et) payment gateway.
 
-Wraps [`@telebirr/sdk-core`](../ts-core/) with React context, hooks, and ready-to-use components. All components are client-rendered (`'use client'`) and ship with built-in i18n support for five languages.
+Wraps [`@telebirr-sdk/sdk-core`](../ts-core/) with React context, hooks, and ready-to-use components. All components are client-rendered (`'use client'`) and ship with built-in i18n support for five languages.
 
 ## Installation
 
 ```bash
-npm install @telebirr/react-elements @telebirr/sdk-core
+npm install @telebirr-sdk/react-elements @telebirr-sdk/sdk-core
 ```
 
 **Peer dependencies:**
@@ -15,16 +15,16 @@ npm install @telebirr/react-elements @telebirr/sdk-core
 | Package | Version |
 |---------|---------|
 | `react` | `>=19` |
-| `@telebirr/sdk-core` | latest |
+| `@telebirr-sdk/sdk-core` | latest |
 
-`@telebirr/react-elements` also depends on `i18next` and `react-i18next`, which are installed automatically.
+`@telebirr-sdk/react-elements` also depends on `i18next` and `react-i18next`, which are installed automatically.
 
 ## Quick Start
 
 ### 1. Wrap your app in `TelebirrProvider`
 
 ```tsx
-import { TelebirrProvider } from '@telebirr/react-elements';
+import { TelebirrProvider } from '@telebirr-sdk/react-elements';
 
 function App() {
   return (
@@ -50,7 +50,7 @@ function App() {
 ### 2. Use the `usePayment` hook
 
 ```tsx
-import { usePayment, PaymentButton, ErrorDisplay } from '@telebirr/react-elements';
+import { usePayment, PaymentButton, ErrorDisplay } from '@telebirr-sdk/react-elements';
 
 function CheckoutPage() {
   const { charge, loading, error, data, reset } = usePayment();
@@ -79,7 +79,7 @@ function CheckoutPage() {
 ### 3. Render a status badge
 
 ```tsx
-import { TestModeBadge, PaymentStatus } from '@telebirr/react-elements';
+import { TestModeBadge, PaymentStatus } from '@telebirr-sdk/react-elements';
 
 function Header() {
   return (
@@ -107,7 +107,7 @@ Context provider that must wrap any component using Telebirr hooks or components
 
 | Prop | Type | Required | Description |
 |------|------|----------|-------------|
-| `config` | `TelebirrConfig` | Yes | SDK configuration (environment, credentials, merchant details). See [`@telebirr/sdk-core` docs](../ts-core/README.md) for the full shape. |
+| `config` | `TelebirrConfig` | Yes | SDK configuration (environment, credentials, merchant details). See [`@telebirr-sdk/sdk-core` docs](../ts-core/README.md) for the full shape. |
 | `children` | `ReactNode` | Yes | Application tree. |
 | `translations` | `Record<string, TelebirrTranslations>` | No | Custom translation overrides keyed by locale code. Merged on top of built-in translations. |
 
@@ -464,7 +464,7 @@ Custom translations are merged on top of the built-in strings for each locale. A
 If you need to initialize translations outside of the provider (e.g. for SSR or testing), use the `createTelebirrI18n` factory:
 
 ```tsx
-import { createTelebirrI18n } from '@telebirr/react-elements';
+import { createTelebirrI18n } from '@telebirr-sdk/react-elements';
 
 const i18n = createTelebirrI18n({
   en: { payNow: 'Pay' },
@@ -477,7 +477,7 @@ i18n.t('payNow'); // "Pay"
 A pre-built singleton is also exported as `telebirrI18n`:
 
 ```tsx
-import { telebirrI18n } from '@telebirr/react-elements';
+import { telebirrI18n } from '@telebirr-sdk/react-elements';
 
 telebirrI18n.t('processing'); // "Processing..."
 ```
@@ -515,7 +515,7 @@ telebirrI18n.t('processing'); // "Processing..."
 
 ## Re-exports
 
-Everything from `@telebirr/sdk-core` is re-exported, so you can import types and utilities directly:
+Everything from `@telebirr-sdk/sdk-core` is re-exported, so you can import types and utilities directly:
 
 ```tsx
 import {
@@ -524,7 +524,7 @@ import {
   buildReceiveCode,
   type CreateOrderParams,
   type TelebirrConfig,
-} from '@telebirr/react-elements';
+} from '@telebirr-sdk/react-elements';
 ```
 
 ## Testing

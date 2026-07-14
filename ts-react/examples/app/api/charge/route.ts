@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { Telebirr } from '@telebirr/sdk-core';
-import type { TelebirrConfig } from '@telebirr/sdk-core';
+import { Telebirr } from '@telebirr-sdk/sdk-core';
+import type { TelebirrConfig } from '@telebirr-sdk/sdk-core';
 
 function getConfig(): TelebirrConfig {
   return {

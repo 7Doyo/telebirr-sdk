@@ -10,10 +10,10 @@
       "homepage": "https://ahadutech.com"
     }
   ],
-  "homepage": "https://github.com/7Doyo/telebirr-sdk",
+  "homepage": "https://github.com/7Doyo/php-sdk",
   "support": {
-    "issues": "https://github.com/7Doyo/telebirr-sdk/issues",
-    "source": "https://github.com/7Doyo/telebirr-sdk"
+    "issues": "https://github.com/7Doyo/php-sdk/issues",
+    "source": "https://github.com/7Doyo/php-sdk/telebirr-sdk"
   },
   "keywords": [
     "telebirr",

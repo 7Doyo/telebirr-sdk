@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { PaymentStatus as PaymentStatusEnum } from '@telebirr/sdk-core';
+import { PaymentStatus as PaymentStatusEnum } from '@telebirr-sdk/sdk-core';
 
 /** Props accepted by the {@link PaymentStatus} badge component. */
 interface PaymentStatusProps {

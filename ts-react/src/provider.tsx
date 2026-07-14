@@ -2,8 +2,8 @@
 import { createContext, useContext, useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { I18nextProvider } from 'react-i18next';
-import { Telebirr } from '@telebirr/sdk-core';
-import type { TelebirrConfig } from '@telebirr/sdk-core';
+import { Telebirr } from '@telebirr-sdk/sdk-core';
+import type { TelebirrConfig } from '@telebirr-sdk/sdk-core';
 import { createTelebirrI18n } from './i18n/index.js';
 import type { TelebirrTranslations } from './i18n/index.js';
 

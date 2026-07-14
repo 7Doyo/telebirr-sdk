@@ -3,7 +3,7 @@ import { usePayment } from '../hooks/use-payment.js';
 import type {
   CreateOrderParams,
   CreateOrderResponse,
-} from '@telebirr/sdk-core';
+} from '@telebirr-sdk/sdk-core';
 
 /** Props accepted by the {@link CheckoutElement} render-prop component. */
 interface CheckoutElementProps {

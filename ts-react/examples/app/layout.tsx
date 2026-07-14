@@ -1,9 +1,10 @@
-import type { Metadata } from 'react';
+// import type { Metadata } from 'react';
+import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Telebirr Next.js Example',
-  description: 'Payment integration with @telebirr/sdk-core and @telebirr/react-elements',
+  description: 'Payment integration with @telebirr-sdk/sdk-core and @telebirr-sdk/react-elements',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
