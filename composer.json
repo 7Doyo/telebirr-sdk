@@ -54,7 +54,7 @@
         "Telebirr": "Telebirr\\Laravel\\TelebirrFacade"
       }
     }
-  },
+  }, 
   "config": {
     "sort-packages": true
   },
