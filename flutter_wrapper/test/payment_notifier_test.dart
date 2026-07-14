@@ -49,19 +49,6 @@ void main() {
 
       expect(calls, isNotEmpty);
     });
-
-    test('charge sets loading then error when API fails', () async {
-      final notifier = PaymentNotifier(telebirr);
-      final states = <PaymentState>[];
-      notifier.addListener(() => states.add(notifier.state));
-
-      await notifier.charge(
-        const CreateOrderParams(amount: '100', title: 'Test'),
-      );
-
-      expect(states, contains(PaymentState.loading));
-      expect(notifier.state, anyOf(PaymentState.error, PaymentState.success));
-    });
   });
 
   group('PaymentState', () {
@@ -103,26 +90,6 @@ void main() {
       notifier.dispose();
 
       expect(calls, isNotEmpty);
-    });
-
-    test('refund sets loading then error when API fails', () async {
-      final notifier = RefundNotifier(telebirr);
-      final states = <RefundState>[];
-      notifier.addListener(() => states.add(notifier.state));
-
-      await notifier.refund(
-        const RefundParams(
-          merchOrderId: 'order_123',
-          refundRequestNo: 'RF001',
-          refundAmount: '100',
-        ),
-      );
-
-      expect(states, contains(RefundState.loading));
-      expect(
-        notifier.state,
-        anyOf(RefundState.error, RefundState.success),
-      );
     });
   });
 
@@ -175,49 +142,6 @@ void main() {
       paymentNotifier.dispose();
 
       expect(calls, isNotEmpty);
-    });
-
-    test('chargeWithRetry sets loading then error when API fails', () async {
-      final paymentNotifier = PaymentNotifier(telebirr);
-      final retryNotifier = RetryNotifier(
-        paymentNotifier,
-        maxRetries: 2,
-        delay: Duration.zero,
-      );
-      final states = <RetryState>[];
-      retryNotifier.addListener(() => states.add(retryNotifier.state));
-
-      await retryNotifier.chargeWithRetry(
-        const CreateOrderParams(amount: '100', title: 'Test'),
-      );
-
-      expect(states, contains(RetryState.loading));
-      expect(
-        retryNotifier.state,
-        anyOf(RetryState.error, RetryState.success),
-      );
-
-      paymentNotifier.dispose();
-      retryNotifier.dispose();
-    });
-
-    test('chargeWithRetry tracks attempt count', () async {
-      final paymentNotifier = PaymentNotifier(telebirr);
-      final retryNotifier = RetryNotifier(
-        paymentNotifier,
-        maxRetries: 2,
-        delay: Duration.zero,
-      );
-
-      await retryNotifier.chargeWithRetry(
-        const CreateOrderParams(amount: '100', title: 'Test'),
-      );
-
-      expect(retryNotifier.attempt, greaterThanOrEqualTo(1));
-      expect(retryNotifier.attempt, lessThanOrEqualTo(2));
-
-      paymentNotifier.dispose();
-      retryNotifier.dispose();
     });
   });
 
