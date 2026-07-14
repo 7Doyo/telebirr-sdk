@@ -10,8 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  telebirr_sdk_core:
-    path: ../../dart_core
   telebirr_flutter_elements:
     path: ..
 
